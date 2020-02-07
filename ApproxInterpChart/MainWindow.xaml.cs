@@ -20,6 +20,7 @@ namespace ApproxInterpChart
     /// </summary>
     public partial class MainWindow : Window
     {
+
         public MainWindow()
         {
             InitializeComponent();
@@ -27,7 +28,20 @@ namespace ApproxInterpChart
 
         private void ButtonNewChart_Click(object sender, RoutedEventArgs e)
         {
+            int amount = Convert.ToInt32(TextBoxAmount.Text);
+            int step = Convert.ToInt32(TextBoxStep.Text);
+            int maxValue = Convert.ToInt32(TextBoxMaximum.Text);
+            int minValue = Convert.ToInt32(TextBoxMinimum.Text);
+            CanvasData canvasData = new CanvasData(amount, step, maxValue, minValue);
 
+            CanvasChart.CanvasData = canvasData;
+
+            // Sprawdzić czy nie ma tekstu zamiast liczb
+            // Liczby mogą być tylko całkowite
+            // Liczby muszą być dodatnie
+            // Amount i step więsze niż 0
+            // MaxValue większe od MinValue
+            // Przesyła dane, dorób sprawdzanie czy wszystko się zgadza itp.
         }
     }
 }
