@@ -43,5 +43,21 @@ namespace ApproxInterpChart
             // MaxValue większe od MinValue
             // Przesyła dane, dorób sprawdzanie czy wszystko się zgadza itp.
         }
+
+
+        #region Buttons
+
+        private void UserControlTopButton_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            System.Windows.Application.Current.Shutdown();
+        }
+
+
+        #endregion
+
+        private void UserControlTopButton_PreviewMouseLeftButtonDown_1(object sender, MouseButtonEventArgs e)
+        {
+            // WindowState = WindowState.Minimized;
+        }
     }
 }
