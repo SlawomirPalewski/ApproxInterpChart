@@ -16,7 +16,7 @@
                     <RowDefinition Height="4*" />
                 </Grid.RowDefinitions>
                 <TextBlock Text="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}, Path=DisplayedText, UpdateSourceTrigger=PropertyChanged}" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10,5,0,0" FontSize="14" FontFamily="Calibri"/>
-                <TextBox x:Name="TextBoxStep" Text="{Binding step, Mode=TwoWay}" Grid.Row="1" Margin="10,5,10,10" MaxLength="4"/>
+                <TextBox x:Name="TextBoxStep" Text="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}, Path=TextValue, UpdateSourceTrigger=PropertyChanged}" Grid.Row="1" Margin="10,5,10,10" MaxLength="4"/>
             </Grid>
         </Border>
 

@@ -24,10 +24,19 @@ namespace ApproxInterpChart
         {
             InitializeComponent();
         }
+        
+
+        public static readonly DependencyProperty textValue = DependencyProperty.Register("TextValue", typeof(string), typeof(UserControlValueInput));
 
         public static readonly DependencyProperty basicColor = DependencyProperty.Register("BasicColor", typeof(Brush), typeof(UserControlValueInput));
 
         public static readonly DependencyProperty displayedText = DependencyProperty.Register("DisplayedText", typeof(string), typeof(UserControlValueInput));
+
+        public string TextValue
+        {
+            get { return (string)GetValue(textValue); }
+            set { SetValue(textValue, value); }
+        }
 
         public string DisplayedText
         {

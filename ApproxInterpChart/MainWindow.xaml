@@ -56,19 +56,28 @@
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="10" />
                     <ColumnDefinition Width="*" />
-
                     <ColumnDefinition Width="10" />
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="10" />
                     <RowDefinition Height="auto" />
+                    <RowDefinition Height="10" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="10" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="10" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="10" />
                     <RowDefinition Height="auto" />
                     <RowDefinition Height="*" />
                     <RowDefinition Height="10" />
                 </Grid.RowDefinitions>
 
-                <local:UserControlValueInput Grid.Row="1" Grid.Column="1" BasicColor="#FF658EB6"  DisplayedText="Test"></local:UserControlValueInput>
-                <Button x:Name="ButtonNewChart" Content="Generate new chart" Grid.Row="2" Grid.Column="1" Click="ButtonNewChart_Click" />
+                <local:UserControlValueInput x:Name="ControlAmount" Grid.Row="1" Grid.Column="1" BasicColor="#FF658EB6" TextValue="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:UserControlValueInput}}, Path=TextValue, Mode=TwoWay}" DisplayedText="Amount"/>
+                <local:UserControlValueInput x:Name="ControlStep" Grid.Row="3" Grid.Column="1" BasicColor="#FF658EB6" TextValue="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:UserControlValueInput}}, Path=TextValue, Mode=TwoWay}" DisplayedText="Step"/>
+                <local:UserControlValueInput x:Name="ControlMaximum" Grid.Row="5" Grid.Column="1" BasicColor="#FF658EB6" TextValue="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:UserControlValueInput}}, Path=TextValue, Mode=TwoWay}" DisplayedText="Maximum X value"/>
+                <local:UserControlValueInput x:Name="ControlMinimum" Grid.Row="7" Grid.Column="1" BasicColor="#FF658EB6" TextValue="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:UserControlValueInput}}, Path=TextValue, Mode=TwoWay}" DisplayedText="Minimum X value"/>
+                <Button x:Name="ButtonNewChart" Content="Generate new chart" Grid.Row="9" Grid.Column="1" Click="ButtonNewChart_Click" />
             </Grid>
         </Border>
 
