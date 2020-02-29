@@ -20,7 +20,7 @@
             </WindowChrome>
         </WindowChrome.WindowChrome>
 
-    <Grid x:Name="Background" Background="#FF101820" >
+    <Grid x:Name="Background" Background="#FF164677" >
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="10" />
             <ColumnDefinition Width="auto" />
@@ -35,21 +35,47 @@
             <RowDefinition Height="10" />
         </Grid.RowDefinitions>
 
-        <DockPanel Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="5" Background="#FFF2AA4C">
+        <DockPanel Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="5" Background="#FF455B70" MouseLeftButtonDown="DockPanel_MouseLeftButtonDown">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="20" />
                     <ColumnDefinition Width="20" />
                 </Grid.ColumnDefinitions>
-                <local:UserControlTopButton Grid.Column="2" BasicColor="#FFF2AA4C" PressedColor="#FF795526" DisplayedText="X" PreviewMouseLeftButtonUp="UserControlTopButton_PreviewMouseLeftButtonDown" ></local:UserControlTopButton>
-                <local:UserControlTopButton Grid.Column="1" BasicColor="#FFF2AA4C" PressedColor="#FF795526" DisplayedText="—" PreviewMouseLeftButtonUp="UserControlTopButton_PreviewMouseLeftButtonDown_1"></local:UserControlTopButton>
+                <local:UserControlTopButton Grid.Column="2" BasicColor="#FF455B70" PressedColor="#FF153453" DisplayedText="X" PreviewMouseLeftButtonUp="UserControlTopButton_PreviewMouseLeftButtonDown" ></local:UserControlTopButton>
+                <local:UserControlTopButton Grid.Column="1" BasicColor="#FF455B70" PressedColor="#FF153453" DisplayedText="—" PreviewMouseLeftButtonUp="UserControlTopButton_PreviewMouseLeftButtonDown_1"></local:UserControlTopButton>
             </Grid>
         </DockPanel>
         
         <custom:UserControlChart x:Name="CanvasChart" Grid.Row="2" Grid.Column="3" />
 
-        <Border Grid.Row="2" Grid.Column="1" CornerRadius="15" BorderBrush="#FFF2AA4C" Background="#FFF2AA4C">
+
+        <Border Grid.Row="2" Grid.Column="1" CornerRadius="15" BorderBrush="#FF215283" Background="#FF455B70" Width="150">
+            <Grid >
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="10" />
+                    <ColumnDefinition Width="*" />
+
+                    <ColumnDefinition Width="10" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="10" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="10" />
+                </Grid.RowDefinitions>
+
+                <local:UserControlValueInput Grid.Row="1" Grid.Column="1" BasicColor="#FF658EB6"  DisplayedText="Test"></local:UserControlValueInput>
+                <Button x:Name="ButtonNewChart" Content="Generate new chart" Grid.Row="2" Grid.Column="1" Click="ButtonNewChart_Click" />
+            </Grid>
+        </Border>
+
+
+
+        <!--
+        <Border Grid.Row="2" Grid.Column="1" CornerRadius="15" BorderBrush="#FF215283" Background="#FF455B70">
             <Grid >
 
                 <Grid.ColumnDefinitions>
@@ -83,7 +109,8 @@
 
                 <Button x:Name="ButtonNewChart" Content="Generate new chart" Grid.ColumnSpan="2" Grid.Row="5" Grid.Column="1" Click="ButtonNewChart_Click" />
             </Grid>
-        </Border>
+        </Border
+        >-->
 
         
 

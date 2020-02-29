@@ -64,6 +64,9 @@
     <Compile Include="UserControlTopButton.xaml.cs">
       <DependentUpon>UserControlTopButton.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControlValueInput.xaml.cs">
+      <DependentUpon>UserControlValueInput.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -85,6 +88,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControlTopButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControlValueInput.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

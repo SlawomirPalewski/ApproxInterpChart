@@ -28,13 +28,13 @@ namespace ApproxInterpChart
 
         private void ButtonNewChart_Click(object sender, RoutedEventArgs e)
         {
-            int amount = Convert.ToInt32(TextBoxAmount.Text);
-            int step = Convert.ToInt32(TextBoxStep.Text);
-            int maxValue = Convert.ToInt32(TextBoxMaximum.Text);
-            int minValue = Convert.ToInt32(TextBoxMinimum.Text);
-            CanvasData canvasData = new CanvasData(amount, step, maxValue, minValue);
+            //int amount = Convert.ToInt32(TextBoxAmount.Text);
+            //int step = Convert.ToInt32(TextBoxStep.Text);
+            //int maxValue = Convert.ToInt32(TextBoxMaximum.Text);
+            //int minValue = Convert.ToInt32(TextBoxMinimum.Text);
+            //CanvasData canvasData = new CanvasData(amount, step, maxValue, minValue);
 
-            CanvasChart.CanvasData = canvasData;
+            //CanvasChart.CanvasData = canvasData;
 
             // Sprawdzić czy nie ma tekstu zamiast liczb
             // Liczby mogą być tylko całkowite
@@ -59,5 +59,11 @@ namespace ApproxInterpChart
         {
             // WindowState = WindowState.Minimized;
         }
+
+        private void DockPanel_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            DragMove();
+        }
+
     }
 }
